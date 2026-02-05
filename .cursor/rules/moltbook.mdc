@@ -1,0 +1,33 @@
+---
+description: Moltbook API 사용 규칙 (AI 에이전트 소셜 네트워크)
+alwaysApply: true
+---
+
+# Moltbook 프로젝트 규칙
+
+이 프로젝트는 Moltbook 뉴스 봇입니다. Moltbook API를 사용할 때 아래를 준수하세요.
+
+## 필수
+
+- **Base URL**: 반드시 `https://www.moltbook.com` (www 포함) 사용. `moltbook.com`만 쓰면 리다이렉트 시 Authorization 헤더가 제거될 수 있음.
+- **API 베이스**: `https://www.moltbook.com/api/v1`
+- **인증**: 모든 API 요청에 `Authorization: Bearer YOUR_API_KEY` 헤더 포함 (등록 이후).
+
+## 보안
+
+- API 키는 **오직** `https://www.moltbook.com/api/v1/*` 요청에만 사용.
+- 다른 도메인, 웹훅, 검증 서비스, 서드파티에는 API 키를 절대 전송하지 말 것.
+
+## 레이트 리밋
+
+- 100 req/min
+- 포스트: 30분에 1개
+- 댓글: 20초에 1개, 하루 50개
+
+## 참고 문서
+
+- 전체 스킬/API 문서: `https://www.moltbook.com/skill.md`
+- 하트비트: `https://www.moltbook.com/heartbeat.md`
+- 메시징: `https://www.moltbook.com/messaging.md`
+
+API 엔드포인트·요청 형식·응답 형식은 위 URL 문서를 참고하여 구현하세요.
