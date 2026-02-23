@@ -1,9 +1,6 @@
 name: Moltbook News Bot (pnpm)
 
 on:
-  schedule:
-    # 매일 KST 08:50 실행 = UTC 23:50 (전날)
-    - cron: "50 23 * * *"
   workflow_dispatch: {}
 
 jobs:
